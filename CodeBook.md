@@ -45,4 +45,5 @@ Final touch-up of the data set
 Creating second data set
 ------------------------
 The second requested dataset is created in a very straigthwoward way, applying the aggregate() function on the measurement columns and using the first two columns(subject, activity) as grouping variables.
+Just to really make it tidy the columns of the grouping variables are named logically.
 The reulting dsataset is written in the file tidy2.txt.
