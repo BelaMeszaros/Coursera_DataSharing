@@ -42,4 +42,5 @@ names(data) <- c("subject", "activity", featurenames[featuresneeded])
 write.table(data, "tidy.txt")
 ## Creating the second dataset
 data2<-aggregate(data[,3:68], by = list (data$subject, data$activity), FUN = mean)
+names(data2)[1:2] <- c("subject", "activity")
 write.table(data2, "tidy2.txt")
