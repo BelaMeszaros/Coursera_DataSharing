@@ -12,6 +12,6 @@ Columns:
 
 tidy2.txt
 ---------
-Agrregated data from tidy.txt
+Aggregated data from tidy.txt
 
 The columns are the same as in the tidy.txt, but here the values are showing the average of the given masurement with respect to the subject and the activity combinations.  
