@@ -7,18 +7,27 @@ In order to be sure that the necessary data in the zip file are available I chec
 Loading auxliary datafiles
 --------------------------
 These file contains the metadata for the measurements:
+
 UCI HAR Dataset/features.txt: the name of the measurements in the datasets (actual column names of the datasets)
+
 UCI HAR Dataset/train/subject_train.txt: subject codes for the training datasets
+
 UCI HAR Dataset/test/subject_test.txt: sibject codes for the test datasets
+
 UCI HAR Dataset/activity_labels.txt: code conversion table for the activity code in the datasets to activity strings
+
 UCI HAR Dataset/train/y_train.txt: the activities belonging to the training dataset (coded as per activitylabels.txt)
+
 UCI HAR Dataset/test/y_test.txt: the activities belonging to the test dataset (coded as per activitylabels.txt)
 
 Loading data sets
 -----------------
 The training and the test datasets. This takes a longer time.
+
 UCI HAR Dataset/train/X_train.txt
+
 UCI HAR Dataset/test/X_test.txt
+
 This file containc the measurement data per subject/activity as code in the corresponding subject.txt and and activity.txt files. The column names are defined in the features.txt.
 
 Cleaning feature names
@@ -33,6 +42,7 @@ Using the logical vector created in the next point, the two datasets are subset 
 Merging the two datasets and subjects and activities
 ----------------------------------------------------
 The two datasets are merged together with the merge() function, parameters: all=TRUE, sort=FALSE.
+
 The subject codes and activity codes are merged with simple concatenating.
 
 Final touch-up of the data set
@@ -45,5 +55,7 @@ Final touch-up of the data set
 Creating second data set
 ------------------------
 The second requested dataset is created in a very straigthwoward way, applying the aggregate() function on the measurement columns and using the first two columns(subject, activity) as grouping variables.
+
 Just to really make it tidy the columns of the grouping variables are named logically.
+
 The reulting dsataset is written in the file tidy2.txt.
